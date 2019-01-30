@@ -28,6 +28,12 @@ class TodosController < ApplicationController
         redirect_to root_path, notice: 'Update Successful'
     end 
 
+    def destroy
+        todo = Todo.find(params[:id])
+        todo.destroy
+        redirect_to root_path, notice: 'Delete Sucessful'
+    end 
+
     private
 
     def todo_params
