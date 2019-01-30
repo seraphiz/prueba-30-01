@@ -14,6 +14,10 @@ class TodosController < ApplicationController
         redirect_to root_path, notice: 'ToDo add correctly!'
     end
 
+    def show
+        @todo = Todo.find(params[:id])
+    end 
+
     private
 
     def todo_params
