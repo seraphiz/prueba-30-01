@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
     
     def index
-        @todos = Todo.all
+        @todos = Todo.order(:id)
     end
 
     def new
@@ -20,6 +20,12 @@ class TodosController < ApplicationController
 
     def edit
         @todo = Todo.find(params[:id])
+    end 
+
+    def update
+        todo = Todo.find(params[:id])
+        todo.update(todo_params)
+        redirect_to root_path, notice: 'Update Successful'
     end 
 
     private
