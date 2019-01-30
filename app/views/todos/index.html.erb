@@ -8,7 +8,7 @@
 
     <% @todos.each do |todo| %>
 
-     <li class="list-group-item"> <%= todo.description %> - <%= link_to 'Show', todo_path(todo) %></li>
+     <li class="list-group-item"> <%= todo.description %> - <%= link_to 'Show', todo_path(todo) %> - <%= link_to 'Edit', todo_edit_path(todo) %></li>
   
     <% end %>
   
