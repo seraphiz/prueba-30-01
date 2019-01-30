@@ -1,16 +1,7 @@
 <h1>SOY EL EDIT</h1>
 <br>
-<%= form_with(model: @todo, local: true) do |todo| %>
 
-
-  <div class="form-group">
-   <%= todo.label :description %>
-   <%= todo.text_field :description, class: 'form-control' %> 
-  </div>
-    <%= todo.submit 'Edit', class: 'btn btn-primary' %>
- 
- 
- <% end %>
+<%= render 'todos/form' %>
 
  <br>
 

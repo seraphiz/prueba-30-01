@@ -1,16 +1,6 @@
 <h1>SOY EL NEW</h1>
 
-<%= form_with(model: @todo, local: true) do |todo| %>
-
-
-  <div class="form-group">
-   <%= todo.label :description %>
-   <%= todo.text_field :description, class: 'form-control' %> 
-  </div>
-    <%= todo.submit 'Confirm', class: 'btn btn-primary' %>
- 
- 
- <% end %>
+<%= render 'todos/form' %>
 
  <br>
 
