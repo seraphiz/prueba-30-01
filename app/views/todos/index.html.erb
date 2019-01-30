@@ -2,13 +2,13 @@
 <br>
 <%= notice %>
 <br><br>
-<%= link_to 'Creat New ToDo', todos_new_path %>
+<%= link_to 'Creat New ToDo', new_todos_path %>
 <br><br>
 <ul class="list-group">
 
     <% @todos.each do |todo| %>
 
-     <li class="list-group-item"> <%= todo.description %> - <%= link_to 'COMPLETED!', complete_todos_path(todo), method: :patch %> - <%= link_to 'Show', todo_path(todo) %> - <%= link_to 'Edit', todo_edit_path(todo) %> - <%= link_to 'Delete', todo_delete_path(todo), method: :delete %></li>
+     <li class="list-group-item"> <%= todo.description %> - <%= link_to 'COMPLETED!', complete_todos_path(todo), method: :patch %> - <%= link_to 'Show', todo_path(todo) %> - <%= link_to 'Edit', edit_todo_path(todo) %> - <%= link_to 'Delete', delete_todo_path(todo), method: :delete %></li>
   
     <% end %>
   
