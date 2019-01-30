@@ -1,0 +1,35 @@
+<h1>SOY LA LISTA</h1>
+
+<div class="row">
+    <div class="col-sm-6" style="background-color:lavender;"> <h3>Not Completed</h3>
+    <div style="background-color:lavender;">
+        <div class="col-12 col-md-12 col-lg-12">
+        <ul>
+        <% @uncompleted_todos.each do |incompletos| %>
+            
+            <li><%= incompletos.description %></li>
+        
+        <% end %>
+        
+        </ul>
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-6" style="background-color:lavenderblush;"><h3>Completed</h3>
+        <div style="background-color:lavenderblush;">
+            <div class="col-12 col-md-12 col-lg-12">
+                <ul>
+                    <% @completed_todos.each do |completos| %>
+            
+                        <li><%= completos.description %></li>
+        
+                    <% end %>
+        
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <%= link_to 'Back', root_path %>
+</div>  
+
